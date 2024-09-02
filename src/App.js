@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Login from './components/Login';
 import Register from './components/Register';
-import AccommodationList from './components/AccommodationList';
+import AccommodationList from './components/AccomodationList';
 import Booking from './components/Booking';
 import AdminPanel from './components/AdminPanel';
 import Payment from './components/Payment';
