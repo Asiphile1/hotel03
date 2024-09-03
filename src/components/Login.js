@@ -16,33 +16,38 @@ const Login = () => {
 
   return (
     <Box className="login-container">
-      <Box className="login-box">
-        <div className="geometric-pattern"></div>
-        <div className="geometric-pattern-small"></div>
-        <Typography variant="h4" className="title">
-          Welcome, home
-        </Typography>
-        <TextField
-          label="User Name"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          fullWidth
-          margin="normal"
-          className="form-field"
-        />
-        <TextField
-          label="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          fullWidth
-          margin="normal"
-          className="form-field"
-        />
-        {authError && <Typography color="error">{authError.message}</Typography>}
-        <Button variant="contained" fullWidth onClick={handleSubmit} className="login-button">
-          Sign In
-        </Button>
+      <Box className="left-side">
+        <Box className="login-box">
+          <div className="geometric-pattern"></div>
+          <div className="geometric-pattern-small"></div>
+          <Typography variant="h4" className="title">
+            Welcome, home
+          </Typography>
+          <TextField
+            label="User Name"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            fullWidth
+            margin="normal"
+            className="form-field"
+          />
+          <TextField
+            label="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            fullWidth
+            margin="normal"
+            className="form-field"
+          />
+          {authError && <Typography color="error">{authError.message}</Typography>}
+          <Button variant="contained" fullWidth onClick={handleSubmit} className="login-button">
+            Sign In
+          </Button>
+        </Box>
+      </Box>
+      <Box className="right-side">
+        
       </Box>
     </Box>
   );

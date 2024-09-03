@@ -1,13 +1,27 @@
 .login-container {
     display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .left-side {
+    width: 50%;
+    background-color: #4d0000; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #4d0000; /* Dark red background color */
+    position: relative;
+  }
+  
+  .right-side {
+    width: 50%;
+    background-image: url('/public/assets/StockCake-Opulent\ Hotel\ Lobby_1724764446.jpg'); 
+    background-size: cover;
+    background-position: center;
   }
   
   .login-box {
-    background-color: #f0f0f0; /* Light gray box background */
+    background-color: #f0f0f0; 
     padding: 32px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -16,7 +30,7 @@
   
   .title {
     margin-bottom: 32px;
-    color: #3b1e00; /* Dark brown text color */
+    color: #3b1e00; 
     text-align: center;
   }
   
@@ -26,7 +40,7 @@
   
   .login-button {
     margin-top: 16px;
-    background-color: #6a0000; /* Darker red button color */
+    background-color: #6a0000;
     color: #ffffff;
   }
   
