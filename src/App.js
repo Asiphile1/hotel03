@@ -8,7 +8,7 @@ import Register from './components/Register';
 import AccommodationList from './components/AccomodationList';
 import Booking from './components/Booking';
 import AdminPanel from './components/AdminPanel';
-import Payment from './components/Payment';
+// import Payment from './components/Payment';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/hotels" element={<AccommodationList />} />
           <Route path="/book/:id" element={<Booking />} />
           <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/payment" element={<Payment />} />
+          {/* <Route path="/payment" element={<Payment />} /> */}
         </Routes>
       </Router>
     </Provider>

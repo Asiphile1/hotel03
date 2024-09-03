@@ -1,17 +1,17 @@
-// src/components/Payment.js
-import React from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
-import CheckoutForm from './CheckoutForm';
 
-const stripePromise = loadStripe('YOUR_PUBLISHABLE_KEY');
+// import React from 'react';
+// import { loadStripe } from '@stripe/stripe-js';
+// import { Elements } from '@stripe/react-stripe-js';
+// import CheckoutForm from './CheckoutForm';
 
-const Payment = () => {
-  return (
-    <Elements stripe={stripePromise}>
-      <CheckoutForm />
-    </Elements>
-  );
-};
+// const stripePromise = loadStripe('YOUR_PUBLISHABLE_KEY');
 
-export default Payment;
+// const Payment = () => {
+//   return (
+//     <Elements stripe={stripePromise}>
+//       <CheckoutForm />
+//     </Elements>
+//   );
+// };
+
+// export default Payment;

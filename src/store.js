@@ -1,5 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { thunk } from 'redux-thunk'; // Named import
+import { thunk } from 'redux-thunk'; // Named import because it doesn't have a default export
+// import thunk from 'redux-thunk'; or I can import it directly like this
 import authReducer from './reducers/authReducer';
 import hotelReducer from './reducers/hotelReducer';
 
