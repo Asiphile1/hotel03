@@ -1,48 +1,53 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { register } from '../actions/authActions';
-import { TextField, Button, Box, Typography, Snackbar, Alert } from '@mui/material';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
-import './SignUp.css'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { useDispatch, useSelector } from 'react-redux';
+// import { register } from '../actions/authActions';
+import {
+  TextField,
+  Button,
+  Box,
+  Typography,
+  Snackbar,
+  Alert,
+} from "@mui/material";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import "./SignUp.css";
 
 const Register = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [number, setNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [authError, setAuthError] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState("");
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    
     if (!email || !password) {
       setAuthError("Please provide both email and password.");
       return;
     }
 
     try {
-   
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
 
-      console.log('User registered successfully:', userCredential);
+      console.log("User registered successfully:", userCredential);
 
-      setOpenSnackbar(true); 
+      setOpenSnackbar(true);
       setTimeout(() => {
-        navigate('/login');
+        navigate("/login");
       }, 3000);
-
-      
     } catch (error) {
-    
       setAuthError(error.message);
     }
   };
-
 
   return (
     <Box className="register-container">
@@ -98,16 +103,19 @@ const Register = () => {
           type="password"
         />
         {authError && <Typography color="error">{authError}</Typography>}
-        <Button variant="contained" onClick={handleSubmit} className="register-button">
+        <Button
+          variant="contained"
+          onClick={handleSubmit}
+          className="register-button"
+        >
           Sign Up
         </Button>
 
-        
         <Snackbar
           open={openSnackbar}
           autoHideDuration={6000}
           onClose={() => setOpenSnackbar(false)}
-          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
         >
           <Alert severity="success" onClose={() => setOpenSnackbar(false)}>
             Signed up successfully!
@@ -117,6 +125,5 @@ const Register = () => {
     </Box>
   );
 };
-
 
 export default Register;

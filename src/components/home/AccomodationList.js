@@ -1,11 +1,19 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchHotels } from '../../../actions/hotelActions';
-import { Card, CardContent, CardMedia, Typography, Button, Grid, Container } from '@mui/material';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchHotels } from "../../actions/hotelActions";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+  Grid,
+  Container,
+} from "@mui/material";
 
 const AccommodationList = () => {
   const dispatch = useDispatch();
-  const hotels = useSelector(state => state.hotels.hotels);
+  const hotels = useSelector((state) => state.hotels.hotels);
 
   useEffect(() => {
     dispatch(fetchHotels());
@@ -25,11 +33,19 @@ const AccommodationList = () => {
               />
               <CardContent>
                 <Typography variant="h5">{hotel.name}</Typography>
-                <Typography variant="body2" color="text.secondary">{hotel.address}</Typography>
-                <Typography variant="body2" color="text.secondary">${hotel.pricePerNight}/night</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {hotel.address}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  ${hotel.pricePerNight}/night
+                </Typography>
               </CardContent>
-              <Button size="small" color="primary">View Details</Button>
-              <Button size="small" color="secondary">Add to Favourites</Button>
+              <Button size="small" color="primary">
+                View Details
+              </Button>
+              <Button size="small" color="secondary">
+                Add to Favourites
+              </Button>
             </Card>
           </Grid>
         ))}
