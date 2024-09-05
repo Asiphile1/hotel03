@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../actions/authActions';
 import { TextField, Button, Box, Typography } from '@mui/material';
-import './Register.css'; 
+import './SignUp.css'
 
 const Register = () => {
   const [firstName, setFirstName] = useState('');
@@ -60,7 +60,7 @@ const Register = () => {
         </Box>
         {authError && <Typography color="error">{authError.message}</Typography>}
         <Button variant="contained" onClick={handleSubmit} className="register-button">
-          Sign In
+          Sign Up
         </Button>
       </Box>
     </Box>

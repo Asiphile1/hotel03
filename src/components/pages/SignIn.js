@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../actions/authActions';
 import { TextField, Button, Typography, Box } from '@mui/material';
-import './login.css';
+import { Link } from 'react-router-dom';
+import './SignIn.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -44,11 +45,12 @@ const Login = () => {
           <Button variant="contained" fullWidth onClick={handleSubmit} className="login-button">
             Sign In
           </Button>
+          <Typography className="sign-up-link">
+            Not a member yet? <Link to="/register">Sign Up here</Link>
+          </Typography>
         </Box>
       </Box>
-      <Box className="right-side">
-        
-      </Box>
+      <Box className="right-side"></Box>
     </Box>
   );
 };
