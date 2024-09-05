@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { login } from '../../actions/authActions';
-import { TextField, Button, Typography, Box } from '@mui/material';
+import { TextField, Button, Typography, Box, Snackbar, Alert } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './SignIn.css';
 
@@ -12,6 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState('');
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const navigate = useNavigate();
 
@@ -27,7 +28,11 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log('User signed in:', userCredential);
 
-      navigate('/home');
+      
+      setOpenSnackbar(true);
+      setTimeout(() => {
+        navigate('/home');
+      }, 3000);
       
     } catch (error) {
       switch (error.code) {
@@ -84,6 +89,16 @@ const Login = () => {
           <Typography className="sign-up-link">
             Not a member yet? <Link to="/register">Sign Up here</Link>
           </Typography>
+          <Snackbar
+            open={openSnackbar}
+            autoHideDuration={6000}
+            onClose={() => setOpenSnackbar(false)}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+          >
+            <Alert severity="success" onClose={() => setOpenSnackbar(false)}>
+              Signed in successfully!
+            </Alert>
+          </Snackbar>
         </Box>
       </Box>
       <Box className="right-side"></Box>

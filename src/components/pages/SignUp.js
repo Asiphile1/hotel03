@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../actions/authActions';
-import { TextField, Button, Box, Typography } from '@mui/material';
+import { TextField, Button, Box, Typography, Snackbar, Alert } from '@mui/material';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 import './SignUp.css'
@@ -14,6 +14,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState('');
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const navigate = useNavigate();
 
@@ -30,7 +31,10 @@ const Register = () => {
 
       console.log('User registered successfully:', userCredential);
 
-      navigate('/login');
+      setOpenSnackbar(true); 
+      setTimeout(() => {
+        navigate('/login');
+      }, 3000);
 
       
     } catch (error) {
@@ -97,6 +101,18 @@ const Register = () => {
         <Button variant="contained" onClick={handleSubmit} className="register-button">
           Sign Up
         </Button>
+
+        
+        <Snackbar
+          open={openSnackbar}
+          autoHideDuration={6000}
+          onClose={() => setOpenSnackbar(false)}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert severity="success" onClose={() => setOpenSnackbar(false)}>
+            Signed up successfully!
+          </Alert>
+        </Snackbar>
       </Box>
     </Box>
   );
