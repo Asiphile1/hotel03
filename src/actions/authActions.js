@@ -1,4 +1,4 @@
-// src/actions/authActions.js
+
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 

@@ -1,4 +1,4 @@
-// src/components/AccommodationList.js
+
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchHotels } from '../actions/hotelActions';

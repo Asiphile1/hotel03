@@ -1,12 +1,12 @@
-// src/App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Login from './components/Login';
-import Register from './components/Register';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
 import AccommodationList from './components/AccomodationList';
-import Booking from './components/Booking';
+import Booking from './components/pages/Booking';
 import AdminPanel from './components/AdminPanel';
 // import Payment from './components/Payment';
 

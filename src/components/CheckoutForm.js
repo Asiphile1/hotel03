@@ -1,4 +1,4 @@
-// src/components/CheckoutForm.js
+
 import React from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Button } from '@mui/material';
@@ -15,7 +15,7 @@ const CheckoutForm = () => {
     });
     if (!error) {
       console.log('Payment successful:', paymentMethod);
-      // Handle the payment and booking logic here
+      //  payment and booking logic here
     } else {
       console.error('Payment error:', error);
     }

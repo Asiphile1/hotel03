@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../actions/authActions';
+import { login } from '../../actions/authActions';
 import { TextField, Button, Typography, Box } from '@mui/material';
-import './login.css';  // Import the CSS file
+import './login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');

@@ -1,4 +1,4 @@
-// src/actions/bookingActions.js
+
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebase';
 

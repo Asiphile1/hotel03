@@ -1,4 +1,4 @@
-// src/reducers/hotelReducer.js
+
 const initialState = {
     hotels: [],
     error: null,
