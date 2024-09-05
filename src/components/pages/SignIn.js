@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
@@ -12,6 +13,8 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = async () => {
     
     if (!email || !password) {
@@ -23,6 +26,8 @@ const Login = () => {
       
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log('User signed in:', userCredential);
+
+      navigate('/home');
       
     } catch (error) {
       switch (error.code) {

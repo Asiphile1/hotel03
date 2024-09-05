@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../actions/authActions';
 import { TextField, Button, Box, Typography } from '@mui/material';
@@ -14,6 +15,8 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = async () => {
     
     if (!email || !password) {
@@ -25,8 +28,9 @@ const Register = () => {
    
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
-     
       console.log('User registered successfully:', userCredential);
+
+      navigate('/login');
 
       
     } catch (error) {

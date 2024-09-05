@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Home from './components/pages/Home';
+import HomePage from './components/pages/Home';
 import Login from './components/pages/SignIn';
 import Register from './components/pages/SignUp';
 import AccommodationList from './components/AccomodationList';
@@ -16,7 +16,8 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Routes>
-        <Route path="/" element={<Home />} /> {/* Default landing page */}
+        <Route path="/" element={<HomePage />} /> {/* Default landing page */}
+        <Route path="/home" element={<HomePage />} />
           <Route path="/hotels" element={<AccommodationList />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
