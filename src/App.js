@@ -3,12 +3,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import HomePage from './components/pages/Home';
-import Login from './components/pages/SignIn';
-import Register from './components/pages/SignUp';
-import AccommodationList from './components/AccomodationList';
-import Booking from './components/pages/Booking';
-import AdminPanel from './components/AdminPanel';
+import HomePage from './pages/Home';
+import Login from './pages/SignIn';
+import Register from './pages/SignUp';
+import AccommodationList from './components/common/HOME/AccomodationList';
+import Booking from './pages/Booking';
+import AdminPanel from './components/common/HOME/AdminPanel';
 // import Payment from './components/Payment';
 
 const App = () => {

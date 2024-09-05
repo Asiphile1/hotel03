@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { register } from '../../actions/authActions';
+import { register } from '../actions/authActions';
 import { TextField, Button, Box, Typography, Snackbar, Alert } from '@mui/material';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase';
+import { auth } from '../firebase';
 import './SignUp.css'
 
 const Register = () => {

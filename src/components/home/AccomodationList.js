@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchHotels } from '../actions/hotelActions';
+import { fetchHotels } from '../../../actions/hotelActions';
 import { Card, CardContent, CardMedia, Typography, Button, Grid, Container } from '@mui/material';
 
 const AccommodationList = () => {

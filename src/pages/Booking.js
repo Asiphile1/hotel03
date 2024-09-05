@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { bookHotel } from '../../actions/bookingActions';
+import { bookHotel } from '../actions/bookingActions';
 import { TextField, Button, Container } from '@mui/material';
 
 const Booking = ({ hotelId }) => {
