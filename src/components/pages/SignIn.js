@@ -93,7 +93,7 @@ const Login = () => {
             open={openSnackbar}
             autoHideDuration={6000}
             onClose={() => setOpenSnackbar(false)}
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
           >
             <Alert severity="success" onClose={() => setOpenSnackbar(false)}>
               Signed in successfully!
