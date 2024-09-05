@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase';
 import { login } from '../../actions/authActions';
 import { TextField, Button, Typography, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -8,11 +10,39 @@ import './SignIn.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
-  const authError = useSelector((state) => state.auth.error);
+  const [authError, setAuthError] = useState('');
 
-  const handleSubmit = () => {
-    dispatch(login(email, password));
+  const handleSubmit = async () => {
+    
+    if (!email || !password) {
+      setAuthError("Please enter both email and password.");
+      return;
+    }
+
+    try {
+      
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log('User signed in:', userCredential);
+      
+    } catch (error) {
+      switch (error.code) {
+        case 'auth/wrong-password':
+          setAuthError('Incorrect password.');
+          break;
+        case 'auth/user-not-found':
+          setAuthError('No account found with this email.');
+          break;
+        case 'auth/invalid-email':
+          setAuthError('Invalid email format.');
+          break;
+          case 'auth/too-many-requests':
+            setAuthError('Too many failed login attempts. Please try again later.');
+            break;
+          default:
+            setAuthError('Error signing in. Please try again.');
+            break;
+      }
+    }
   };
 
   return (
@@ -23,11 +53,12 @@ const Login = () => {
           <div className="geometric-pattern-small"></div>
           <Typography variant="h4" className="title">
             Welcome, home
-          </Typography>
+            </Typography>
           <TextField
-            label="User Name"
+            label="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            type="email"
             fullWidth
             margin="normal"
             className="form-field"
@@ -41,7 +72,7 @@ const Login = () => {
             margin="normal"
             className="form-field"
           />
-          {authError && <Typography color="error">{authError.message}</Typography>}
+          {authError && <Typography color="error">{authError}</Typography>}
           <Button variant="contained" fullWidth onClick={handleSubmit} className="login-button">
             Sign In
           </Button>

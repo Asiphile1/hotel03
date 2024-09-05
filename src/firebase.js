@@ -9,7 +9,7 @@ const firebaseConfig = {
   storageBucket: "hotel-app-9e0d7.appspot.com",
   messagingSenderId: "564221027721",
   appId: "1:564221027721:web:3592ab828ce20f10182d58",
-  measurementId: "G-LN50B205BG"
+  // measurementId: "G-LN50B205BG"
 };
 
 const app = initializeApp(firebaseConfig);

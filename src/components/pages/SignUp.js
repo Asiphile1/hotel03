@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../actions/authActions';
 import { TextField, Button, Box, Typography } from '@mui/material';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase';
 import './SignUp.css'
 
 const Register = () => {
@@ -9,12 +11,30 @@ const Register = () => {
   const [lastName, setLastName] = useState('');
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
-  const dispatch = useDispatch();
-  const authError = useSelector((state) => state.auth.error);
+  const [password, setPassword] = useState('');
+  const [authError, setAuthError] = useState('');
 
-  const handleSubmit = () => {
-    dispatch(register(email, number)); 
+  const handleSubmit = async () => {
+    
+    if (!email || !password) {
+      setAuthError("Please provide both email and password.");
+      return;
+    }
+
+    try {
+   
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+     
+      console.log('User registered successfully:', userCredential);
+
+      
+    } catch (error) {
+    
+      setAuthError(error.message);
+    }
   };
+
 
   return (
     <Box className="register-container">
@@ -42,12 +62,13 @@ const Register = () => {
         </Box>
         <Box className="input-container">
           <TextField
-            label="Number"
+            label="Phone Number"
             value={number}
             onChange={(e) => setNumber(e.target.value)}
             className="form-field"
             margin="normal"
             fullWidth
+            type="tel"
           />
           <TextField
             label="Email Address"
@@ -56,9 +77,19 @@ const Register = () => {
             className="form-field"
             margin="normal"
             fullWidth
+            type="email"
           />
         </Box>
-        {authError && <Typography color="error">{authError.message}</Typography>}
+        <TextField
+          label="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="form-field"
+          margin="normal"
+          fullWidth
+          type="password"
+        />
+        {authError && <Typography color="error">{authError}</Typography>}
         <Button variant="contained" onClick={handleSubmit} className="register-button">
           Sign Up
         </Button>
@@ -66,5 +97,6 @@ const Register = () => {
     </Box>
   );
 };
+
 
 export default Register;
