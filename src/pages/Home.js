@@ -86,9 +86,9 @@ const Home = () => {
       <Box className="footer">
         <Box className="footer-content">
           <Typography variant="body1">Contact Us</Typography>
-          <Typography variant="body2">Address: dfhfh dfhrdg</Typography>
-          <Typography variant="body2">Phone: 868327</Typography>
-          <Typography variant="body2">Email: esybhrg@in</Typography>
+          <Typography variant="body2">Address: 263 Dr Pixley Ka Seme (West) Street, DURBAN</Typography>
+          <Typography variant="body2">Phone: 011 824 8822</Typography>
+          <Typography variant="body2">Email: info@LBM.COM</Typography>
         </Box>
       </Box>
     </Container>
