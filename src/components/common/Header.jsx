@@ -80,6 +80,9 @@ export default function Header() {
                   ))}
                 </div>
                 <SocialIcons />
+                <Link to="/login" className="btn btn-primary ml-lg-3">
+                  Sign Up
+                </Link>
               </div>
             </nav>
           </div>
