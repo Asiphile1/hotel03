@@ -60,8 +60,8 @@ This hotel app is designed to provide a seamless experience for users looking to
 - **Frontend:** React, Material-UI (MUI)
 - **Backend:** Firebase (Authentication, Firestore/Realtime Database)
 - **State Management:** Redux
-- **Payment Gateway:** (To be chosen based on requirements)
-- **Hosting:** (To be determined)
+- **Payment Gateway:** stripe
+- **Hosting:** gitpages
 
 ## Setup
 
