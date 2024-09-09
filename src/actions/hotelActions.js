@@ -1,4 +1,4 @@
-// src/actions/hotelActions.js
+
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase';
 

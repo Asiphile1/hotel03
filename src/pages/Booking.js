@@ -61,3 +61,14 @@ const Booking = ({ hotelId }) => {
 };
 
 export default Booking;
+
+
+
+
+// export default function Booking() {
+//   return (
+//     <>
+//       <Heading heading="Booking" title="Home" subtitle="Booking" />
+//     </>
+//   );
+// }

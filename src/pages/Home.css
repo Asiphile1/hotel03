@@ -1,4 +1,4 @@
-/* Navbar Styles */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   padding: 10px 20px;
 }
 
-/* Hero Section Styles */
+
 .hero-section {
   background-color: #e0e0e0;
   height: 400px;
@@ -16,13 +16,13 @@
   align-items: center;
 }
 
-/* Search Filters Styles */
+
 .search-filters {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Featured Section Styles */
+
 .featured-section {
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   height: 300px;
 }
 
-/* Explore Rooms Styles */
+
 .explore-rooms {
   margin-top: 40px;
 }
@@ -56,7 +56,7 @@
   margin-bottom: 10px;
 }
 
-/* Footer Styles */
+
 .footer {
   background-color: #ff5c5c;
   color: white;
