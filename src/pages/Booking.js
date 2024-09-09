@@ -21,6 +21,8 @@ const Booking = ({ hotelId }) => {
   };
 
   return (
+    
+
     <Container maxWidth="sm">
       <h2>Book Hotel</h2>
       <TextField

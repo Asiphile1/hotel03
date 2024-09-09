@@ -74,7 +74,7 @@ export const carouselData = [
     btn2: "Book Room",
   },
   {
-    img: "../assets/img/carousel-2.jpg",
+    img: "/assets/img/carousel-2.jpg",
     title: "Discover A Brand Luxurious Hotel",
     subtitle: "luxury living",
     btn1: "Our Room",
