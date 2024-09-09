@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Hotel App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This hotel app is designed to provide a seamless experience for users looking to book accommodations. It features user authentication, accommodation listings, booking functionality, user profiles, an admin panel, and various additional features. The app uses Material-UI (MUI) for UI components and Firebase for backend services.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### User Authentication
+- **Register/Login:** Users can register and log in using Firebase Authentication.
 
-### `npm start`
+### Accommodation Listings
+- **Photo Gallery:** View images of the hotel.
+- **Map:** Display the location of the hotel.
+- **Price Details:** Information on cost per night or other pricing details.
+- **Basic Information:** Address, star rating, and other relevant details.
+- **Hotel Facilities & Policies:** Amenities and policies of the hotel.
+- **Call-to-Action Button:** Book or view more details.
+- **Sharing Button:** Share accommodation details with others.
+- **Favourites Button:** Save accommodations to favorites.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Booking Functionality
+- **Booking Process:** Users can book accommodations by selecting check-in/check-out dates, number of rooms, guests, etc.
+- **Payments:** Integrate a payment gateway of your choice for transactions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Profile
+- **Profile Section:** View/edit profile, view bookings, and favorite accommodations.
 
-### `npm test`
+### Admin Panel
+- **Admin Login:** Admins can log in to manage the app.
+- **Add Accommodations:** Add new accommodations with details like room type, capacity, price, and availability.
+- **View Reservations:** View reservation details including check-in/check-out dates, guest details, and room details.
+- **Manage Reservations:** Approve, modify, or cancel reservations.
+- **Update Accommodations:** Update details such as room availability, pricing, and descriptions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Data Storage
+- **Firebase Firestore/Realtime:** Store accommodation listings, user data, booking information, etc.
 
-### `npm run build`
+### State Management
+- **Redux:** Manage app state using Redux.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Additional Features
+- **Search Functionality:** Search accommodations based on location, price, and other filters.
+- **Reviews & Ratings:** Leave reviews and ratings for accommodations.
+- **Notifications:** Receive notifications for booking confirmations, updates, and promotions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Security
+- **Data Protection:** Implement measures to protect user data and transactions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Scalability & Performance
+- **Scalability:** Ensure the app can handle a large number of users and accommodations.
+- **Performance:** Optimize performance for a smooth user experience.
 
-### `npm run eject`
+### Compliance
+- **Regulations:** Ensure compliance with relevant regulations and laws regarding user data and transactions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Responsive Design
+- **Compatibility:** Ensure the app is responsive and works well on different devices and screen sizes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies
+- **Frontend:** React, Material-UI (MUI)
+- **Backend:** Firebase (Authentication, Firestore/Realtime Database)
+- **State Management:** Redux
+- **Payment Gateway:** (To be chosen based on requirements)
+- **Hosting:** (To be determined)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Asiphile1/hotel03.git
+   cd hotel-app
