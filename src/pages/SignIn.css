@@ -6,7 +6,7 @@
   
   .left-side {
     width: 50%;
-    background-color: #4d0000; 
+    background-color: #feaf39; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,9 +57,9 @@
     background: linear-gradient(
       45deg,
       #3b1e00 25%,
-      #8b2d00 25%,
+      #feaf39 25%,
       #8b2d00 50%,
-      #3b1e00 50%,
+      #feaf39 50%,
       #3b1e00 75%,
       #8b2d00 75%
     );

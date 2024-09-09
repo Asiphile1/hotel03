@@ -21,7 +21,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/ContactPage";
 import PageNotFound from "./pages/PageNotFound";
 import Room from "./pages/RoomPage";
-import Services from "./pages/ServicesPage";
+import Services from "./components/home/Home";
 import Team from "./pages/TeamPage";
 import Testimonial from "./pages/TestimonialPage";
 
@@ -53,7 +53,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/hotels" element={<AccommodationList />} />
-            <Route path="/book/:id" element={<Booking />} />
+            <Route path="//:id" element={<Booking />} />
             <Route path="/admin" element={<AdminPanel />} />
 
             <Route path="/team" element={<Team />} />

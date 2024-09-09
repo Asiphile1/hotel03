@@ -6,6 +6,8 @@
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2017 Daniel Eden
+
+ for future use revert back to the above animation styles
  */
 
 .animated {
@@ -68,7 +70,7 @@
   animation-name: flash;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+/* originally authored by Nick Pettit, got the different animations on https://github.com/nickpettit/glide */
 
 @keyframes pulse {
   from {

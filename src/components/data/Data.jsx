@@ -11,8 +11,8 @@ export const navList = [
   },
   {
     id: 3,
-    path: "/services",
-    text: "Services",
+    path: "/Profile",
+    text: "Profile",
   },
   {
     id: 4,
@@ -85,17 +85,17 @@ export const about = [
   {
     icon: <i class="fa fa-hotel fa-2x text-primary mb-2"></i>,
     text: "Rooms",
-    count: "7861",
+    count: "861",
   },
   {
     icon: <i class="fa fa-users fa-2x text-primary mb-2"></i>,
     text: "Staffs",
-    count: "1234",
+    count: "234",
   },
   {
     icon: <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>,
     text: "Clients",
-    count: "4321",
+    count: "321",
   },
 ];
 
@@ -136,23 +136,23 @@ export const services = [
 export const team = [
   {
     image: "../assets/img/team-1.jpg",
-    name: "Full Name",
-    designation: "Designation",
+    name: "Athenkosi Mthethwa",
+    designation: "Porter/valet",
   },
   {
     image: "../assets/img/team-2.jpg",
-    name: "Full Name",
-    designation: "Designation",
+    name: "Anelisa Mthethwa",
+    designation: "Receptionist",
   },
   {
     image: "../assets/img/team-3.jpg",
-    name: "Full Name",
-    designation: "Designation",
+    name: "Vuyiswa Nzimande",
+    designation: "Manager",
   },
   {
     image: "../assets/img/team-3.jpg",
-    name: "Full Name",
-    designation: "Designation",
+    name: "Goodman Dlamini",
+    designation: "CEO",
   },
 ];
 
@@ -180,13 +180,13 @@ export const footerItem = [
   },
   {
     id: 2,
-    header: "Services",
+    header: "Profile",
     UnitItem: [
       {
-        name: "Food & Restaurant",
+        name: "Bookings",
       },
       {
-        name: "Spa & Fitness",
+        name: "",
       },
       {
         name: "Sports & Gaming",
@@ -204,15 +204,15 @@ export const footerItem = [
 export const footerContact = [
   {
     icon: <i className="fa fa-map-marker-alt me-3"></i>,
-    name: "123 Street, New York, USA",
+    name: "5 View hights, Lambton Gardens, CapeTown",
   },
   {
     icon: <i className="fa fa-phone-alt me-3"></i>,
-    name: "+012 345 67890",
+    name: "+27 71 568 6151",
   },
   {
     icon: <i className="fa fa-envelope me-3"></i>,
-    name: "info@example.com",
+    name: "info@LBM.com",
   },
 ];
 
@@ -220,25 +220,25 @@ export const contact = [
   {
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
     title: "Booking",
-    email: "book@example.com",
+    email: "enqury@LBM.com",
   },
   {
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
     title: "Technical",
-    email: "tech@example.com",
+    email: "tech@LBM.com",
   },
   {
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
     title: "General",
-    email: "info@example.com",
+    email: "info@LBM.com",
   },
 ];
 export const testimonial = [
   {
     description:
       "Our stay at Le' Bel Mor was simply magical. From the moment we arrived, the staff made us feel like royalty. The room was immaculate, with breathtaking views of the city. Every detail was thoughtfully curated, from the plush bedding to the luxurious bathroom amenities. The concierge team went above and beyond to ensure our stay was perfect, arranging reservations and recommending hidden gems around town. We can't wait to return!",
-    name: "Client Name",
-    profession: "Profession",
+    name: "Asiphile",
+    profession: "Software developer",
     icon: (
       <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
     ),
@@ -247,8 +247,8 @@ export const testimonial = [
   {
     description:
      "I travel frequently for business, and Le' Bel Mor is by far the best hotel I've ever stayed in. The attention to detail is unmatched. The rooms are spacious, elegantly designed, and equipped with everything you could possibly need. The on-site dining options are superb, and the breakfast buffet is a must-try. The staff is incredibly professional and accommodating, making my stay stress-free and enjoyable. I highly recommend Le' Bel Mor for both business and leisure travelers." ,
-    name: "Client Name",
-    profession: "Profession",
+    name: "Nqobile",
+    profession: "teacher",
     icon: (
       <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
     ),
@@ -257,8 +257,8 @@ export const testimonial = [
   {
     description:
       "Celebrating our anniversary at Le' bel Mor was an experience we'll never forget. The ambiance is luxurious, yet welcoming. The rooftop pool offered stunning views, and the spa treatments were heavenly. The hotel surprised us with a complimentary bottle of champagne and a beautifully decorated room, making our special day even more memorable. Every moment at [Hotel Name] was pure bliss, and we will definitely be returning for future celebrations.",
-    name: "Client Name",
-    profession: "Profession",
+    name: "Moliehi",
+    profession: "Engineer",
     icon: (
       <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
     ),

@@ -1,11 +1,11 @@
-import AboutUs from "./AboutUs";
+import AboutUs from "../components/home/About";
 import Booking from "./BookingPage";
 import Team from "./TeamPage";
 import Testimonial from "./TestimonialPage";
 import Contact from "./ContactPage";
 import PageNotFound from "./PageNotFound";
 import Room from "./RoomPage";
-import Services from "./ServicesPage";
+import Profile from "../components/home/Profile";
 import Home from "../components/home/Home";
 export {
   Home,
@@ -16,5 +16,5 @@ export {
   Contact,
   PageNotFound,
   Room,
-  Services,
+  Profile,
 };
